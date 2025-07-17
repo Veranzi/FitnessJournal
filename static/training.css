@@ -1,0 +1,142 @@
+/* General body styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f6f9;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar Styling */
+.navbar {
+    background-color: #343a40; /* Dark background for the navbar */
+    border-bottom: 2px solid #ff5733; /* Orange border at the bottom */
+    padding: 15px 0; /* Increased padding for better height */
+}
+
+.navbar-brand {
+    font-size: 1.75rem; /* Larger font size for the brand */
+    font-weight: bold;
+    color: #ff5733; /* Orange color for the brand */
+    margin-right: auto; /* Ensures the brand stays on the left */
+}
+
+.navbar-nav {
+    margin-left: auto;  /* Ensure that links and button are pushed to the right */
+    list-style-type: none;  /* Removes bullets from the list */
+    display: flex;  /* Display items horizontally */
+    gap: 15px;  /* Adds spacing between links */
+}
+
+.navbar-nav .nav-item .nav-link {
+    color: white; /* White color for navigation links */
+    font-weight: 500;
+    padding: 12px 20px; /* Increased padding for better readability */
+    font-size: 16px;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+    color: #ff5733; /* Orange color on hover */
+}
+
+.navbar-nav .nav-item .btn {
+    background-color: #ff5733; /* Orange background for the Sign Up button */
+    color: white; /* White text for the button */
+    font-weight: 600;
+    padding: 12px 25px; /* Increased padding to make the button larger */
+    font-size: 16px;
+    border-radius: 5px;
+    text-decoration: none; /* Remove underline */
+}
+
+.navbar-nav .nav-item .btn:hover {
+    background-color: #c74d2a; /* Darker orange on hover */
+}
+
+/* Main Content Styling */
+.container {
+    margin-top: 30px;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+}
+
+p {
+    font-size: 1rem;
+    color: #6c757d;
+}
+
+/* Button for Add New Workout */
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 5px;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/* Table Styling */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+}
+
+.table th,
+.table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.table th {
+    background-color: #f8f9fa;
+    font-weight: 600;
+    color: #343a40;
+}
+
+.table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.table .btn-info {
+    background-color: #17a2b8; /* Info button color */
+    color: white;
+    font-weight: 600;
+    border-radius: 5px;
+}
+
+.table .btn-info:hover {
+    background-color: #138496;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar-nav .nav-item .nav-link {
+        font-size: 14px; /* Smaller text for mobile */
+    }
+
+    .navbar-brand {
+        font-size: 1.5rem; /* Smaller brand name on mobile */
+    }
+
+    .container {
+        padding: 0 15px; /* Add padding on mobile for better alignment */
+    }
+
+    .table th,
+    .table td {
+        padding: 10px;
+    }
+
+    .table .btn-info {
+        padding: 8px 15px;
+    }
+}

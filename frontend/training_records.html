@@ -1,0 +1,67 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Training Records</title>
+    <link rel="stylesheet" href="{% static 'training.css' %}">
+</head>
+
+<body> 
+    <!-- Navigation Header -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">FITNESS JOURNAL</a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="{% url 'dashboard' %}">Dashboard</a></li>
+                    <li class="nav-item"><a class="btn btn-outline-light" href="{% url 'index' %} ">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container mt-5">
+        <h1>My Training Records</h1>
+        <p>Here you can track and manage your workout history.</p>
+
+        <!-- Add New Workout Button -->
+        <div class="mb-4">
+            <a href="{% url 'add_workout' %}" class="btn btn-primary">Add New Workout</a>
+        </div>
+
+        <!-- Training Records Table -->
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Exercise</th>
+                        <th>Sets</th>
+                        <th>Reps</th>
+                        <th>Weight</th>
+                        <th>Date</th>
+                        <th>Details</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for record in workout_records %}
+                    <tr>
+                        <td>{{ record.exercise }}</td>
+                        <td>{{ record.sets }}</td>
+                        <td>{{ record.reps }}</td>
+                        <td>{{ record.weight }} kg</td>
+                        <td>{{ record.date }}</td>
+                        <td><a href="#" class="btn btn-info btn-sm">View Details</a></td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</body>
+
+</html>

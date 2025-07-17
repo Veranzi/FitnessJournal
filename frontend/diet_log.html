@@ -1,0 +1,69 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diet Log</title>
+    <link rel="stylesheet" href="{% static 'dietlog.css' %}">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">FITNESS JOURNAL</a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="{% url 'dashboard' %}">Dashboard</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'diet_log' %}">Diet Log</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                    <li class="nav-item"><a class="btn btn-outline-light" href="#">Sign Up</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h1>My Diet Log</h1>
+        <p>Here you can track and manage your meals.</p>
+
+        <!-- Add New Meal Button -->
+        <div class="mb-4">
+            <a href="{% url 'add_meal' %}" class="btn btn-primary">Add New Meal</a>
+        </div>
+
+        <!-- Meal History Table -->
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Food Item</th>
+                        <th>Calories</th>
+                        <th>Carbs</th>
+                        <th>Protein</th>
+                        <th>Fat</th>
+                        <th>Meal Type</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for meal in meals %}
+                    <tr>
+                        <td>{{ meal.food_item }}</td>
+                        <td>{{ meal.calories }} kcal</td>
+                        <td>{{ meal.carbs }} g</td>
+                        <td>{{ meal.protein }} g</td>
+                        <td>{{ meal.fat }} g</td>
+                        <td>{{ meal.meal_type }}</td>
+                        <td>{{ meal.date }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</body>
+
+</html>

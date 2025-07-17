@@ -1,0 +1,183 @@
+/* Navbar Styling */
+.navbar {
+    background-color: #343a40; /* Dark background for the navbar */
+    border-bottom: 2px solid #ff5733; /* Orange border at the bottom */
+    padding: 30px 0; /* Increased padding to increase navbar height */
+}
+
+.navbar-brand {
+    font-size: 1.75rem; /* Increased font size for the brand name */
+    font-weight: bold;
+    color: #ff5733; /* Orange color for the brand */
+    line-height: 1.5; /* Adjusted line height for better spacing */
+}
+
+.navbar-nav .nav-item .nav-link {
+    color: white; /* White color for navigation links */
+    font-weight: 500;
+    padding: 12px 20px; /* Increased padding for larger links */
+    font-size: 16px; /* Slightly increased font size for better readability */
+    line-height: 1.5; /* Adjusted line height for better spacing */
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+    color: #ff5733; /* Orange color on hover */
+}
+
+.navbar-nav .nav-item .active {
+    color: #ff5733; /* Active page link color */
+}
+
+.navbar-nav .nav-item .btn {
+    background-color: #ff5733; /* Orange background for the Sign Up button */
+    color: white; /* White text for the button */
+    font-weight: 600;
+    padding: 14px 25px; /* Increased padding to make the button larger */
+    font-size: 16px; /* Increased button font size */
+    border-radius: 5px;
+}
+
+.navbar-nav .nav-item .btn:hover {
+    background-color: #c74d2a; /* Darker orange on hover */
+}
+
+/* General body styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f6f9;
+    margin: 0;
+}
+
+/* Center the container */
+.container {
+    margin-top: 30px;
+}
+
+/* Card Styling */
+.card {
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+/* Card Body */
+.card-body {
+    padding: 20px;
+}
+
+/* Card Titles */
+.card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Fitness Progress Section */
+#workout-progress-chart,
+#diet-progress-chart {
+    height: 250px;
+    background-color: #f0f0f0; /* Placeholder for the chart background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    color: #007bff;
+}
+
+/* Quick Access Section */
+.card.text-white.bg-primary,
+.card.text-white.bg-success,
+.card.text-white.bg-info {
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.card.text-white.bg-primary {
+    background-color: #007bff;
+}
+
+.card.text-white.bg-success {
+    background-color: #28a745;
+}
+
+.card.text-white.bg-info {
+    background-color: #17a2b8;
+}
+
+/* Links inside Cards */
+.card .btn {
+    font-weight: bold;
+    padding: 10px 20px;
+    font-size: 1rem;
+}
+
+.card .btn:hover {
+    opacity: 0.8;
+}
+
+/* Upcoming Schedule Section */
+.card .card-body p {
+    font-size: 1rem;
+    color: #6c757d;
+}
+
+.card .card-body h5 {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+/* Call-to-Action Section */
+.alert {
+    background-color: #17a2b8;
+    color: white;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+.alert h4 {
+    font-weight: bold;
+}
+
+.alert .btn {
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 10px;
+    }
+
+    /* Adjust column layout for smaller screens */
+    .row {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .card {
+        margin-bottom: 20px;
+    }
+
+    .card-body {
+        padding: 15px;
+    }
+
+    /* Adjust text sizes */
+    .card-title {
+        font-size: 1.1rem;
+    }
+
+    .card .btn {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+
+    .alert h4 {
+        font-size: 1.2rem;
+    }
+}
