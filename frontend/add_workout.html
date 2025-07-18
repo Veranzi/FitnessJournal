@@ -16,10 +16,9 @@
             <a class="navbar-brand" href="#">FITNESS JOURNAL</a>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#">Dashboard</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Training Records</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
-                    <li class="nav-item"><a class="btn btn-outline-light" href="#">Sign Up</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'dashboard' %}">Dashboard</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'training_records' %}">Training Records</a></li>
+                    <li class="nav-item"><a class="btn btn-outline-light" href="{% url 'index' %}">Logout</a></li>
                 </ul>
             </div>
         </div>
