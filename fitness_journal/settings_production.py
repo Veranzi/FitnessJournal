@@ -27,6 +27,9 @@ DATABASES = {
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
 
+# Ensure collectstatic also picks up project-level static directory
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+
 # Add whitenoise middleware for static files
 MIDDLEWARE.insert(1, 'whitenoise.middleware.WhiteNoiseMiddleware')
 
