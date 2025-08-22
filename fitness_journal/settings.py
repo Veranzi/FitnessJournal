@@ -25,7 +25,19 @@ SECRET_KEY = 'django-insecure-8v=04r(5#1t7s!d=uq#tltvy$cjp-0hx72jjb3da%8ml6f&#%j
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+
+# Allow Render.com external hostnames
+render_hostname = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
+if render_hostname:
+    ALLOWED_HOSTS.append(render_hostname)
+    # Also allow subdomains of the same host just in case
+    if '.' in render_hostname:
+        domain_parts = render_hostname.split('.')
+        if len(domain_parts) > 2:
+            # keep the last two parts as base domain e.g. onrender.com
+            base_domain = '.'.join(domain_parts[-2:])
+            ALLOWED_HOSTS.append(f'.{base_domain}')
 
 
 # Application definition
