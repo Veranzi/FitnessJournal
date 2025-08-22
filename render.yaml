@@ -3,7 +3,10 @@ services:
     name: fitness-journal
     env: python
     plan: free
-    buildCommand: chmod +x build.sh && ./build.sh
+    buildCommand: |
+      pip install -r requirements.txt
+      python manage.py collectstatic --no-input
+      python manage.py migrate
     startCommand: gunicorn fitness_journal.wsgi:application
     envVars:
       - key: PYTHON_VERSION
