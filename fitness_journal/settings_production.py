@@ -12,7 +12,16 @@ DEBUG = False
 SECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-8v=04r(5#1t7s!d=uq#tltvy$cjp-0hx72jjb3da%8ml6f&#%j')
 
 # Update allowed hosts for production
-ALLOWED_HOSTS = ['*']  # You can restrict this to your specific domain later
+ALLOWED_HOSTS = ['fitnessjournalgain.onrender.com', '.onrender.com', 'localhost', '127.0.0.1']
+
+# Trust the Render domain for CSRF (scheme required)
+CSRF_TRUSTED_ORIGINS = [
+    'https://fitnessjournalgain.onrender.com',
+    'https://*.onrender.com',
+]
+
+# Honor X-Forwarded-Proto header set by the proxy (e.g., Render)
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 # Database configuration for production
 DATABASES = {
