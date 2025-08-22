@@ -1,0 +1,222 @@
+/* Universal Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 1.6;
+    background-color: #f4f6f9;
+    color: #000000;
+}
+
+/* Header Styles */
+header {
+    background-color: #343a40;  /* Dark background for header */
+    color: white;
+    padding: 20px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style: none;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #ff5733;  /* Orange hover color for navbar links */
+}
+
+/* Main Content Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+.plan-info p {
+    margin-bottom: 8px;
+    color: #555;
+}
+
+.plan-info p strong {
+    color: #007bff;  /* Blue color for the labels */
+}
+
+/* Notification Section Styling */
+
+
+.notification p {
+    margin: 0;
+}
+
+.notification p strong {
+    color: #ff5733; /* Orange color for important text like 'Note' */
+}
+
+
+/* Plan and Session Cards */
+.plan-card, .session-card {
+    background-color: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.plan-card h2, .session-card h3 {
+    color: #007bff;  /* Blue for headers */
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+.plan-card p, .session-card p {
+    color: #555;
+    font-size: 13px;
+    margin-bottom: 6px;
+}
+
+/* Button Styles */
+.plan-card .btn-view-sessions, .session-card .btn-complete-session {
+    background-color: #ff5733;  /* Blue background for buttons */
+    color: #000000;
+    padding: 10px 10px;
+    text-decoration: none;
+    font-size: 12px;
+    border-radius: 5px;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+.plan-card .btn-view-sessions:hover, .session-card .btn-complete-session:hover {
+    background-color: #d3c612;  /* Darker blue on hover */
+}
+
+/* Form Styles */
+form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+input[type="text"], input[type="date"], input[type="number"], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 1em;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button.btn-submit {
+    background-color: #28a745;  /* Green background for the submit button */
+    color: white;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    font-size: 1.2em;
+    width: 100%;
+    margin-top: 10px;
+}
+
+button.btn-submit:hover {
+    background-color: #218838;  /* Darker green on hover */
+}
+
+/* Placeholder Styling for Inputs */
+input::placeholder, textarea::placeholder {
+    color: #999;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        display: block;
+        text-align: left;
+        padding: 10px;
+    }
+
+    nav ul li {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    .plan-card, .session-card, form {
+        padding: 15px;
+    }
+
+    button.btn-submit {
+        width: 100%;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    .plan-card .btn-view-sessions, .session-card .btn-complete-session {
+        width: 100%;
+    }
+}
+
+/* Extra small devices (phones in portrait mode) */
+@media (max-width: 480px) {
+    .navbar-nav {
+        flex-direction: column; /* Stack the navbar items vertically */
+        align-items: center; /* Center items horizontally */
+    }
+
+    .navbar-nav .nav-item {
+        margin-bottom: 10px; /* Add space between items in the navbar */
+    }
+
+    .navbar-nav .nav-item .nav-link {
+        font-size: 13px; /* Smaller font size for navigation links */
+        padding: 8px 12px; /* Adjust padding to fit better */
+    }
+
+    .navbar-nav .nav-item .btn {
+        padding: 10px 20px; /* Adjust button size for mobile */
+        font-size: 14px; /* Smaller font size on buttons */
+    }
+
+    .container {
+        padding: 10px; /* Add more padding for better mobile alignment */
+    }
+
+    h1 {
+        font-size: 1.25rem; /* Smaller heading for very small screens */
+    }
+
+    p {
+        font-size: 0.9rem; /* Adjust text size for better readability */
+    }
+}

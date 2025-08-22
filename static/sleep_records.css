@@ -1,6 +1,6 @@
 /* General body styling */
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Times New Roman', Times, serif;    
     background-color: #f4f6f9;
     margin: 0;
     padding: 0;
@@ -9,12 +9,13 @@ body {
 /* Navbar Styling */
 .navbar {
     background-color: #343a40; /* Dark background for the navbar */
+    font-family: 'Times New Roman', Times, serif; 
     border-bottom: 2px solid #ff5733; /* Orange border at the bottom */
     padding: 15px 0; /* Increased padding for better height */
 }
 
 .navbar-brand {
-    font-size: 1.75rem; /* Larger font size for the brand */
+    font-size: 1rem; /* Larger font size for the brand */
     font-weight: bold;
     color: #ff5733; /* Orange color for the brand */
     margin-right: auto; /* Ensures the brand stays on the left */
@@ -22,6 +23,7 @@ body {
 
 .navbar-nav {
     margin-left: auto;  /* Ensure that links and button are pushed to the right */
+    font-family: 'Times New Roman', Times, serif;
     list-style-type: none;  /* Removes bullets from the list */
     display: flex;  /* Display items horizontally */
     gap: 15px;  /* Adds spacing between links */
@@ -55,10 +57,12 @@ body {
 /* Main Content Styling */
 .container {
     margin-top: 30px;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 h1 {
     font-size: 2rem;
+    font-family: 'Times New Roman', Times, serif;
     font-weight: bold;
     color: #333;
 }
@@ -66,6 +70,7 @@ h1 {
 p {
     font-size: 1rem;
     color: #6c757d;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 /* Button for Add New Workout */
@@ -73,9 +78,10 @@ p {
     background-color: #007bff;
     border: none;
     padding: 10px 20px;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 600;
     border-radius: 5px;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .btn-primary:hover {
@@ -86,6 +92,7 @@ p {
 .table {
     width: 100%;
     border-collapse: collapse;
+    font-family: 'Times New Roman', Times, serif;
     margin-top: 30px;
 }
 
@@ -119,24 +126,85 @@ p {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .navbar-nav .nav-item .nav-link {
-        font-size: 14px; /* Smaller text for mobile */
+    /* Navbar */
+    .navbar-nav {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        margin-top: 10px; /* Space between items */
     }
 
-    .navbar-brand {
-        font-size: 1.5rem; /* Smaller brand name on mobile */
+    .navbar-nav .nav-link {
+        font-size: 14px; /* Adjust font size for mobile */
+        padding: 10px 15px; /* Adjust padding */
     }
 
+    .navbar-nav .btn {
+        padding: 10px 20px; /* Adjust button padding */
+        font-size: 14px; /* Adjust button font size */
+    }
+
+    /* Main content */
     .container {
-        padding: 0 15px; /* Add padding on mobile for better alignment */
+        padding: 0 15px; /* Add padding for better mobile alignment */
     }
 
+    h1 {
+        font-size: 1.5rem; /* Smaller heading for mobile */
+    }
+
+    p {
+        font-size: 0.9rem; /* Slightly smaller text for better readability */
+    }
+
+    /* Table adjustments */
     .table th,
     .table td {
-        padding: 10px;
+        padding: 8px; /* Reduced padding for mobile */
     }
 
     .table .btn-info {
-        padding: 8px 15px;
+        padding: 8px 15px; /* Adjust button size for mobile */
+        font-size: 14px; /* Smaller font size */
+    }
+
+    .btn-primary {
+        padding: 8px 15px; /* Adjust button padding */
+        font-size: 14px; /* Smaller font size */
+    }
+}
+
+@media (max-width: 480px) {
+    /* Navbar items stacked and centered for very small screens */
+    .navbar-nav {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    .navbar-nav .nav-item {
+        margin-bottom: 10px; /* Space between navbar items */
+    }
+
+    .navbar-brand {
+        font-size: 1.5rem; /* Smaller font for the brand */
+    }
+
+    /* Table adjustments */
+    .table th,
+    .table td {
+        padding: 6px; /* Further reduced padding for small screens */
+    }
+
+    /* Button adjustments */
+    .btn-primary {
+        width: 100%; /* Make buttons full width */
+        padding: 12px; /* Adjust padding for better fit */
+    }
+
+    h1 {
+        font-size: 1.25rem; /* Smaller heading */
+    }
+
+    p {
+        font-size: 0.85rem; /* Further reduce paragraph font size */
     }
 }

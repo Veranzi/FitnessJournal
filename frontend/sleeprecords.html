@@ -1,0 +1,62 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sleep Records</title>
+    <link rel="stylesheet" href="{% static 'sleep_records.css' %}">
+</head>
+
+<body>
+    <!-- Navigation Header -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">FITNESS JOURNAL</a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="{% url 'dashboard' %}">Dashboard</a></li>
+                    <li class="nav-item"><a class="btn btn-outline-light" href="{% url 'index' %}">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h1>My Sleep Records</h1>
+        <p>Here you can track and manage your sleep data.</p>
+
+        <!-- Add New Sleep Record Button -->
+        <div class="mb-4">
+            <a href="{% url 'add_sleep_record' %}" class="btn btn-primary">Add New Sleep Record</a>
+        </div>
+
+        <!-- Sleep Records Table -->
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Hours Slept</th>
+                        <th>Quality</th>
+                        <th>Notes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for record in records %}
+                    <tr>
+                        <td>{{ record.date }}</td>
+                        <td>{{ record.hours_slept }} hrs</td>
+                        <td>{{ record.quality }}</td>
+                        <td>{{ record.notes }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,235 @@
+/* General body styling */
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #f4f6f9;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar Styling */ 
+.navbar {
+    background-color: #343a40; /* Dark background for the navbar */
+    font-family: 'Times New Roman', Times, serif;
+    border-bottom: 2px solid #ff5733; /* Orange border at the bottom */
+    padding: 15px 0; /* Increased padding for better height */
+}
+
+.navbar-brand {
+    font-size: 1rem; /* Larger font size for the brand */
+    font-weight: bold;
+    color: #ff5733; /* Orange color for the brand */
+    margin-right: auto; /* Ensures the brand stays on the left */
+}
+
+.navbar-nav {
+    margin-left: auto;  /* Ensure that links and button are pushed to the right */
+    list-style-type: none;  /* Removes bullets from the list */
+    display: flex;  /* Display items horizontally */
+    gap: 15px;  /* Adds spacing between links */
+}
+
+.navbar-nav .nav-item .nav-link {
+    color: white; /* White color for navigation links */
+    font-weight: 500;
+    padding: 12px 20px; /* Increased padding for better readability */
+    font-size: 16px;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+    color: #ff5733; /* Orange color on hover */
+}
+
+.navbar-nav .nav-item .btn {
+    background-color: #ff5733; /* Orange background for the Sign Up button */
+    color: white; /* White text for the button */
+    font-weight: 600;
+    padding: 12px 25px; /* Increased padding to make the button larger */
+    font-size: 16px;
+    border-radius: 5px;
+    text-decoration: none; /* Remove underline */
+}
+
+.navbar-nav .nav-item .btn:hover {
+    background-color: #c74d2a; /* Darker orange on hover */
+}
+
+/* Main Content Styling */
+.container {
+    margin-top: 30px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+h1 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+p {
+    font-size: 12px;
+    color: #6c757d;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Form Styling */
+form {
+    margin-top: 20px;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: 600;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 12px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    margin-top: 5px;
+}
+
+textarea {
+    height: 100px;
+}
+
+/* Submit Button */
+.d-grid .btn-primary {
+    background-color: #ff5733;
+    border: none;
+    padding: 10px 20px;
+    font-size: 13px;
+    font-weight: 600;
+    border-radius: 5px;
+    width: 100%;
+    color: #ffffff;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.d-grid .btn-primary:hover {
+    background-color: #773627;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar-nav .nav-item .nav-link {
+        font-size: 14px; /* Smaller text for mobile */
+    }
+
+    .navbar-brand {
+        font-size: 1.5rem; /* Smaller brand name on mobile */
+    }
+
+    .container {
+        padding: 0 15px; /* Add padding on mobile for better alignment */
+    }
+
+    h1 {
+        font-size: 1.5rem; /* Slightly smaller heading for mobile */
+    }
+
+    .btn-primary {
+        padding: 8px 15px; /* Smaller button on mobile */
+    }
+
+    .table th,
+    .table td {
+        padding: 10px;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar-nav .nav-item .nav-link {
+        font-size: 14px; /* Smaller text for mobile */
+        padding: 10px 15px; /* Adjust padding for better mobile layout */
+    }
+
+    .navbar-brand {
+        font-size: 1.5rem; /* Smaller brand name on mobile */
+        margin-right: auto; /* Ensure it stays on the left on mobile */
+    }
+
+    .navbar {
+        padding: 10px 0; /* Reduced padding for navbar on mobile */
+    }
+
+    .container {
+        padding: 0 15px; /* Add padding on mobile for better alignment */
+    }
+
+    h1 {
+        font-size: 1.5rem; /* Slightly smaller heading for mobile */
+    }
+
+    .btn-primary {
+        padding: 8px 15px; /* Smaller button on mobile */
+        font-size: 14px; /* Adjust font size for the button */
+    }
+
+    form {
+        padding: 15px; /* Less padding on form for mobile */
+    }
+
+    .form-group {
+        margin-bottom: 15px; /* Reduce spacing between form elements */
+    }
+
+    input[type="text"],
+    input[type="number"],
+    input[type="date"],
+    textarea {
+        font-size: 13px; /* Slightly smaller text for form inputs */
+    }
+
+    .table th,
+    .table td {
+        padding: 8px; /* Reduce padding in table cells */
+    }
+}
+
+/* Extra small devices (phones in portrait mode) */
+@media (max-width: 480px) {
+    .navbar-nav {
+        flex-direction: column; /* Stack the navbar items vertically */
+        align-items: center; /* Center items horizontally */
+    }
+
+    .navbar-nav .nav-item {
+        margin-bottom: 10px; /* Add space between items in the navbar */
+    }
+
+    .navbar-nav .nav-item .nav-link {
+        font-size: 13px; /* Smaller font size for navigation links */
+        padding: 8px 12px; /* Adjust padding to fit better */
+    }
+
+    .navbar-nav .nav-item .btn {
+        padding: 10px 20px; /* Adjust button size for mobile */
+        font-size: 14px; /* Smaller font size on buttons */
+    }
+
+    .container {
+        padding: 10px; /* Add more padding for better mobile alignment */
+    }
+
+    h1 {
+        font-size: 1.25rem; /* Smaller heading for very small screens */
+    }
+
+    p {
+        font-size: 0.9rem; /* Adjust text size for better readability */
+    }
+}

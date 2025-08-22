@@ -1,0 +1,26 @@
+services:
+  - type: web
+    name: fitness-journal
+    env: python
+    plan: free
+    buildCommand: chmod +x build.sh && ./build.sh
+    startCommand: gunicorn fitness_journal.wsgi:application
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.0
+      - key: DJANGO_SETTINGS_MODULE
+        value: fitness_journal.settings_production
+      - key: SECRET_KEY
+        generateValue: true
+      - key: WEB_CONCURRENCY
+        value: 1
+      - key: DATABASE_URL
+        fromDatabase:
+          name: fitness-journal-db
+          property: connectionString
+
+databases:
+  - name: fitness-journal-db
+    plan: free
+    databaseName: fitness_journal
+    user: fitness_journal_user

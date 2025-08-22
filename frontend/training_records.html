@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Training Records</title>
-    <link rel="stylesheet" href="{% static 'training.css' %}">
+    <link rel="stylesheet" href="{% static 'trainingrecords.css' %}">
 </head>
 
 <body> 
@@ -43,7 +43,7 @@
                         <th>Reps</th>
                         <th>Weight</th>
                         <th>Date</th>
-                        <th>Details</th>
+                        
                     </tr>
                 </thead>
                 <tbody>
@@ -54,7 +54,7 @@
                         <td>{{ record.reps }}</td>
                         <td>{{ record.weight }} kg</td>
                         <td>{{ record.date }}</td>
-                        <td><a href="#" class="btn btn-info btn-sm">View Details</a></td>
+                        
                     </tr>
                     {% endfor %}
                 </tbody>

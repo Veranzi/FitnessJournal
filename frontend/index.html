@@ -42,14 +42,12 @@
                 <div class="col-12">
                     <nav class="main-nav">
                         <!-- ***** Logo Start ***** -->
-                        <a href="index.html" class="logo">Fitness<em> Journal</em></a>
+                        <a href="" class="logo">Fitness<em> Journal</em></a>
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
                         <ul class="nav">    
-                            <li class="scroll-to-section"><a href="#home" class="active">Home</a></li>    
-                            <li class="scroll-to-section"><a href="#about">About</a></li>
-                            <li class="scroll-to-section"><a href="#dashboard">Dashboard</a></li>  <!-- New link added -->
-                            <li class="scroll-to-section"><a href="#contact-us">Contact</a></li>
+                            <li class="scroll-to-section"><a href="" class="active">Home</a></li>    
+                            <li class="scroll-to-section"><a href="{% url 'signup' %}">Dashboard</a></li>  <!-- New link added -->
                             <li class="main-button"><a href="{% url 'signup' %}">Sign Up</a></li>
 
                         </ul>
@@ -104,7 +102,7 @@
                             <div class="right-content">
                                 <h4>Training Records</h4>
                                 <p>Log your daily workouts, track sets, reps, and weights, and visualize your progress over time.</p>
-                                <a href="#training-records" class="text-button">Discover More</a>
+                                <a href="{% url 'signup' %}" class="text-button">Discover More</a>
                             </div>
                         </li>
 
@@ -116,7 +114,7 @@
                             <div class="right-content">
                                 <h4>Diet Log</h4>
                                 <p>Record your meals and track daily intake of calories, carbs, proteins, and fats to meet your goals.</p>
-                                <a href="#diet-log" class="text-button">Discover More</a>
+                                <a href="{% url 'signup' %}" class="text-button">Discover More</a>
                             </div>
                         </li>
 
@@ -128,7 +126,7 @@
                             <div class="right-content">
                                 <h4>Body Data</h4>
                                 <p>Track your weight, body measurements, and set fitness goals like weight loss or muscle gain.</p>
-                                <a href="#body-data" class="text-button">Discover More</a>
+                                <a href="{% url 'signup' %}" class="text-button">Discover More</a>
                             </div>
                         </li>
                     </ul>
@@ -143,7 +141,7 @@
                             <div class="right-content">
                                 <h4>Sleep Tracking</h4>
                                 <p>Track your sleep patterns and quality, helping you understand how rest impacts your fitness progress.</p>
-                                <a href="#sleep-records" class="text-button">Discover More</a>
+                                <a href="{% url 'signup' %}" class="text-button">Discover More</a>
                             </div>
                         </li>
 
@@ -155,7 +153,7 @@
                             <div class="right-content">
                                 <h4>Planning Management</h4>
                                 <p>Create custom training plans, set goals, and track your progress across multiple workout cycles.</p>
-                                <a href="#planning" class="text-button">Discover More</a>
+                                <a href="{% url 'signup' %}" class="text-button">Discover More</a>
                             </div>
                         </li>
 
@@ -167,7 +165,7 @@
                             <div class="right-content">
                                 <h4>Dashboard Overview</h4>
                                 <p>Get an overview of all your data: workouts, diet, body measurements, and progress charts in one place.</p>
-                                <a href="#dashboard" class="text-button">Discover More</a>
+                                <a href="{% url 'signup' %}" class="text-button">Discover More</a>
                             </div>
                         </li>
                     </ul>
@@ -187,7 +185,7 @@
                         <h2>Don’t <em>wait</em>, start your fitness journey <em>today</em>!</h2>
                         <p>Track your workouts, meals, and body progress in one place. Set goals, monitor your health metrics, and stay motivated with personalized insights!</p>
                         <div class="main-button scroll-to-section">
-                            <a href="#sign-up">Join Now</a>
+                            <a href="{% url 'signup' %}">Join Now</a>
                         </div>
                     </div>
                 </div>
@@ -221,7 +219,7 @@
                         <!-- Sleep Tracking -->
                         <li><a href='#tabs-4'><img src="{% static 'assets/images/tabs-first-icon.png' %}" alt="">Sleep Tracking</a></li>
                         <!-- Planning Management -->
-                        <div class="main-rounded-button"><a href="#">View All Modules</a></div>
+                        <div class="main-rounded-button"><a href="{% url 'signup' %}">View All Modules</a></div>
                     </ul>
                 </div>
                 <div class="col-lg-8">
@@ -232,7 +230,7 @@
                             <h4>Training Records</h4>
                             <p>Log your daily workouts, including exercises, sets, reps, and weights. Visualize your progress and calculate your total training load.</p>
                             <div class="main-button">
-                                <a href="#">View Details</a>
+                                <a href="{% url 'signup' %}">View Details</a>
                             </div>
                         </article>
 
@@ -242,7 +240,7 @@
                             <h4>Diet Log</h4>
                             <p>Track your meals, including calories, carbs, protein, and fats. Keep an eye on your daily water intake for a balanced lifestyle.</p>
                             <div class="main-button">
-                                <a href="#">View Details</a>
+                                <a href="{% url 'signup' %}">View Details</a>
                             </div>
                         </article>
 
@@ -252,7 +250,7 @@
                             <h4>Body Data</h4>
                             <p>Track your weight, body measurements, and set fitness goals. Visualize your progress over time and stay motivated with data-driven insights.</p>
                             <div class="main-button">
-                                <a href="#">View Details</a>
+                                <a href="{% url 'signup' %}">View Details</a>
                             </div>
                         </article>
 
@@ -262,7 +260,7 @@
                             <h4>Sleep Tracking</h4>
                             <p>Monitor your sleep quality and duration. Understand how your sleep patterns influence your fitness journey.</p>
                             <div class="main-button">
-                                <a href="#">View Details</a>
+                                <a href="{% url 'signup' %}">View Details</a>
                             </div>
                         </article>
                     </section>

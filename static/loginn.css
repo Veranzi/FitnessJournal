@@ -80,14 +80,52 @@ small {
     color: #6c757d;
 }
 
-/* Responsive design for smaller screens */
 @media (max-width: 768px) {
+    /* Adjust card width and padding for smaller screens */
     .card {
         width: 90%;         /* Adjust width to 90% on smaller screens */
         height: auto;       /* Set height to auto on smaller screens */
+        padding: 20px;      /* Reduce padding for better mobile layout */
+    }
+
+    /* Form control adjustments for smaller screens */
+    .form-control {
+        font-size: 14px;    /* Slightly smaller font size for mobile */
+        height: 40px;       /* Adjust input height */
+    }
+
+    /* Button adjustments for mobile */
+    .btn-primary {
+        font-size: 14px;    /* Slightly smaller button text */
+        padding: 10px;      /* Adjust padding to fit smaller screens */
+    }
+
+    /* Adjust card heading font size for mobile */
+    .card h3 {
+        font-size: 1.25rem;  /* Smaller heading text */
+    }
+
+    /* Adjust small text size for mobile */
+    small {
+        font-size: 0.8rem;   /* Smaller text size for small screens */
+    }
+}
+
+/* Extra small devices (phones in portrait mode) */
+@media (max-width: 480px) {
+    /* Ensure card occupies most of the screen width */
+    .card {
+        width: 100%;         /* Full width on very small screens */
+    }
+
+    .form-control {
+        font-size: 16px;     /* Slightly larger font size for readability */
+        height: 45px;        /* Maintain height on extra small screens */
     }
 
     .btn-primary {
-        font-size: 16px;    /* Adjust button font size for mobile */
+        font-size: 16px;     /* Keep font size readable */
+        padding: 12px;       /* Keep button padding consistent */
     }
 }
+

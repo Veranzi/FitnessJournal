@@ -1,183 +1,197 @@
-/* Navbar Styling */
-.navbar {
-    background-color: #343a40; /* Dark background for the navbar */
-    border-bottom: 2px solid #ff5733; /* Orange border at the bottom */
-    padding: 30px 0; /* Increased padding to increase navbar height */
+/* General Body Styling */
+body {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Light background color */
 }
 
-.navbar-brand {
-    font-size: 1.75rem; /* Increased font size for the brand name */
+.custom-navbar {
+    background-color: #343a40; /* Dark background for the navbar */
+    border-bottom: 3px solid #ff5733; /* Orange border at the bottom */
+    padding: 10px 0; /* Reduced padding for a sleeker look */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Aligns the brand name to the left */
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.brand-name {
+    font-size: 1.5rem; /* Larger brand name */
+    font-family: 'Times New Roman', Times, serif;
     font-weight: bold;
     color: #ff5733; /* Orange color for the brand */
-    line-height: 1.5; /* Adjusted line height for better spacing */
+    flex-grow: 1; /* Ensures the brand takes up available space */
 }
 
-.navbar-nav .nav-item .nav-link {
+.nav-links {
+    list-style-type: none; /* Remove bullet points */
+    padding-left: 0;
+    display: flex; /* Ensures links are horizontal */
+    margin-left: auto; /* Push the links to the right */
+}
+
+.nav-item {
+    display: inline-block; /* Inline the links */
+}
+
+.nav-link {
     color: white; /* White color for navigation links */
+    font-family: 'Times New Roman', Times, serif;
     font-weight: 500;
+    font-size: 12px;
     padding: 12px 20px; /* Increased padding for larger links */
-    font-size: 16px; /* Slightly increased font size for better readability */
-    line-height: 1.5; /* Adjusted line height for better spacing */
+    text-decoration: none;
 }
 
-.navbar-nav .nav-item .nav-link:hover {
+.nav-link:hover {
     color: #ff5733; /* Orange color on hover */
 }
 
-.navbar-nav .nav-item .active {
-    color: #ff5733; /* Active page link color */
-}
-
-.navbar-nav .nav-item .btn {
+.btn-logout {
     background-color: #ff5733; /* Orange background for the Sign Up button */
+    font-family: 'Times New Roman', Times, serif;
     color: white; /* White text for the button */
     font-weight: 600;
-    padding: 14px 25px; /* Increased padding to make the button larger */
-    font-size: 16px; /* Increased button font size */
+    padding: 14px 25px;
+    font-size: 10px;
     border-radius: 5px;
+    text-decoration: none;
 }
 
-.navbar-nav .nav-item .btn:hover {
+.btn-logout:hover {
     background-color: #c74d2a; /* Darker orange on hover */
 }
 
-/* General body styles */
-body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #f4f6f9;
-    margin: 0;
-}
 
-/* Center the container */
+
+/* Container for content below the navbar */
 .container {
-    margin-top: 30px;
+    padding-top: 100px; /* Space for the fixed navbar */
+    font-family: 'Times New Roman', Times, serif;
 }
 
-/* Card Styling */
-.card {
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
+/* Chart Grid Layout (2 Rows, 2 Columns) */
+.chart-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 equal-width columns */
+    font-family: 'Times New Roman', Times, serif;
+    gap: 50px; /* Space between the charts */
+    margin-top: 20px;
 }
 
-/* Card Body */
-.card-body {
-    padding: 20px;
-}
-
-/* Card Titles */
-.card-title {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #333;
-}
-
-/* Fitness Progress Section */
-#workout-progress-chart,
-#diet-progress-chart {
-    height: 250px;
-    background-color: #f0f0f0; /* Placeholder for the chart background */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.5rem;
-    color: #007bff;
-}
-
-/* Quick Access Section */
-.card.text-white.bg-primary,
-.card.text-white.bg-success,
-.card.text-white.bg-info {
-    height: 150px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.chart-container {
+    width: 400px;
+    height: 400px;
     text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Titles for Charts */
+.chart-container h3 {
     font-size: 1.2rem;
+    color: #b91616;
+    margin-bottom: 100px;
 }
 
-.card.text-white.bg-primary {
-    background-color: #007bff;
+/* Ensure charts have full width and height */
+#bodyDataChart, #dietChart, #sleepChart, #workoutChart {
+    width: 100% !important;
+    height: 100% !important;
 }
 
-.card.text-white.bg-success {
-    background-color: #28a745;
+/* Container for content below the navbar */
+.container {
+    padding-top: 120px; /* Space for the fixed navbar */
 }
 
-.card.text-white.bg-info {
-    background-color: #17a2b8;
+/* Chart Grid Layout (2 Rows, 2 Columns) */
+.chart-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 equal-width columns */
+    gap: 50px; /* Space between the charts */
+    margin-top: 20px;
 }
 
-/* Links inside Cards */
-.card .btn {
-    font-weight: bold;
-    padding: 10px 20px;
-    font-size: 1rem;
+.chart-container {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.card .btn:hover {
-    opacity: 0.8;
-}
-
-/* Upcoming Schedule Section */
-.card .card-body p {
-    font-size: 1rem;
-    color: #6c757d;
-}
-
-.card .card-body h5 {
+/* Titles for Charts */
+.chart-container h3 {
     font-size: 1.2rem;
-    font-weight: 600;
+    color: #b91616;
+    margin-bottom: 10px; /* Adjusted margin for better alignment */
 }
 
-/* Call-to-Action Section */
-.alert {
-    background-color: #17a2b8;
-    color: white;
-    padding: 20px;
-    margin-top: 30px;
-}
-
-.alert h4 {
-    font-weight: bold;
-}
-
-.alert .btn {
-    font-weight: 600;
-    font-size: 1rem;
+/* Ensure charts have full width and height */
+#bodyDataChart, #dietChart, #sleepChart, #workoutChart {
+    width: 100% !important;
+    height: 100% !important;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    /* Stack charts on smaller screens */
+    .chart-grid {
+        grid-template-columns: 1fr; /* Stack charts vertically */
+        gap: 20px; /* Reduced space between charts */
+    }
+
+    .navbar-collapse {
+        background-color: #343a40; /* Ensuring background for mobile nav */
+    }
+
+    /* Navbar links font-size */
+    .navbar-nav .nav-item .nav-link {
+        font-size: 14px; /* Larger text for better readability on small screens */
+        padding: 10px 15px; /* Adjusted padding */
+    }
+
+    /* Navbar brand font size */
+    .navbar-brand {
+        font-size: 1.5rem; /* Keep it the same on mobile */
+    }
+
+    /* Adjust spacing for charts */
+    .chart-container h3 {
+        font-size: 1.1rem; /* Slightly smaller chart titles */
+    }
+
     .container {
-        padding: 0 10px;
+        padding-top: 120px; /* Ensure enough space from the fixed navbar */
+    }
+}
+
+/* Extra small devices (phones in portrait mode) */
+@media (max-width: 480px) {
+    /* Stack navbar items */
+    .nav-links {
+        flex-direction: column; /* Stack nav links vertically */
+        align-items: center; /* Center the nav items */
     }
 
-    /* Adjust column layout for smaller screens */
-    .row {
-        flex-direction: column;
-        gap: 20px;
+    .nav-link {
+        font-size: 12px; /* Smaller text for mobile */
+        padding: 8px 15px; /* Adjust padding for smaller screens */
     }
 
-    .card {
-        margin-bottom: 20px;
+    .btn-logout {
+        font-size: 12px; /* Adjust font size for the logout button */
+        padding: 10px 18px; /* Adjust padding */
     }
 
-    .card-body {
-        padding: 15px;
-    }
-
-    /* Adjust text sizes */
-    .card-title {
-        font-size: 1.1rem;
-    }
-
-    .card .btn {
-        padding: 8px 16px;
-        font-size: 0.9rem;
-    }
-
-    .alert h4 {
-        font-size: 1.2rem;
+    .chart-container {
+        width: 100%; /* Ensure chart containers fit on small screens */
+        height: 300px; /* Adjust chart height */
     }
 }

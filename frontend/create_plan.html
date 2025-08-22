@@ -1,0 +1,81 @@
+{% load static %}
+
+<!-- planning/templates/planning/create_plan.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create a New Training Plan</title>
+    <link rel="stylesheet" href="{% static 'createplann.css' %}">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{% url 'dashboard' %}">Dashboard</a></li>
+                <li><a href="{% url 'training_plans' %}">Training Plans</a></li>
+                <li><a href="{% url 'create_training_plan' %}">Create New Plan</a></li>
+                <li><a href="{% url 'index' %}">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>Create a New Training Plan</h1>
+
+        <!-- Training Plan Form -->
+        <form method="POST">
+            {% csrf_token %}
+            
+            <div class="form-group">
+                <label for="name">Plan Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter plan name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="goal">Training Goal</label>
+                <textarea id="goal" name="goal" rows="4" placeholder="Describe your training goal (e.g., Build muscle)" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="start_date">Start Date</label>
+                <input type="date" id="start_date" name="start_date" required>
+            </div>
+
+            <div class="form-group">
+                <label for="end_date">End Date</label>
+                <input type="date" id="end_date" name="end_date" required>
+            </div>
+
+            <div class="form-group">
+                <label for="training_type">Training Type</label>
+                <select id="training_type" name="training_type" required>
+                    <option value="strength">Strength</option>
+                    <option value="endurance">Endurance</option>
+                    <option value="flexibility">Flexibility</option>
+                    <option value="general">General Fitness</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="training_frequency">Training Frequency (Days per Week)</label>
+                <input type="number" id="training_frequency" name="training_frequency" min="1" max="7" placeholder="How many days a week?" required>
+            </div>
+
+            <div class="form-group">
+                <label for="notes">Additional Notes</label>
+                <textarea id="notes" name="notes" rows="4" placeholder="Add any additional instructions or notes"></textarea>
+            </div>
+
+            <div class="form-group">
+                <button type="submit" class="btn-submit">Create Plan</button>
+            </div>
+        </form>
+    </div>
+
+</body>
+
+</html>

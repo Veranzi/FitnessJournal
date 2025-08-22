@@ -1,0 +1,42 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Training Plans</title>
+    <link rel="stylesheet" href="{% static 'trainingplan.css' %}">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{% url 'dashboard' %}">Dashboard</a></li>
+                <li><a href="{% url 'training_plans' %}">Training Plans</a></li>
+                <li><a href="{% url 'create_training_plan' %}">Create New Plan</a></li>
+                <li><a href="{% url 'index' %}">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>Your Training Plans</h1>
+
+        {% for plan in plans %}
+        <div class="plan-card">
+            <h2>{{ plan.name }}</h2>
+            <p><strong>Start Date:</strong> {{ plan.start_date }}</p>
+            <p><strong>End Date:</strong> {{ plan.end_date }}</p>
+            <p><strong>Progress:</strong> {{ plan.progress }}%</p>
+            <a href="{% url 'training_plan_sessions' plan.id %}" class="btn-view-sessions">View Sessions</a>
+        </div>
+        {% empty %}
+        <p>You haven't created any training plans yet.</p>
+        {% endfor %}
+    </div>
+</body>
+
+</html>

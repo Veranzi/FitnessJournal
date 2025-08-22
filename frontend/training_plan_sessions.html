@@ -1,0 +1,60 @@
+{% load static %}
+<!-- planning/templates/planning/training_plan_sessions.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sessions for {{ plan.name }}</title>
+    <link rel="stylesheet" href="{% static 'planning.css' %}">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="{% url 'training_plans' %}">Training Plans</a></li>
+                <li><a href="{% url 'create_training_plan' %}">Create New Plan</a></li>
+                <li><a href="{% url 'index' %}">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>Sessions for {{ plan.name }}</h1>
+
+        <!-- Information about the training plan -->
+        <div class="plan-info">
+            <p><strong>Start Date:</strong> {{ plan.start_date }}</p>
+            <p><strong>End Date:</strong> {{ plan.end_date }}</p>
+            <p><strong>Progress:</strong> {{ plan.progress }}%</p>
+        </div>
+
+        <!-- Message about automatic session creation -->
+        <div class="notification">
+            <p><strong>Note:</strong> Hello,,, below are your sessions generated as per the training plan created. You can now view or mark them as complete.</p>
+        </div>
+
+        
+
+        <!-- List of Sessions -->
+        {% for session in sessions %}
+        <div class="session-card">
+            <h3>{{ session.day }}</h3>
+            <p><strong>Exercises:</strong> {{ session.exercises }}</p>
+            <p><strong>Target Sets:</strong> {{ session.target_sets }}</p>
+            <p><strong>Target Reps:</strong> {{ session.target_reps }}</p>
+            <p><strong>Target Weight:</strong> {{ session.target_weight }} kg</p>
+            <p><strong>Due Date:</strong> {{ session.due_date }}</p>
+            <p><strong>Status:</strong> {% if session.completed %}Completed{% else %}Not Completed{% endif %}</p>
+            <a href="{% url 'mark_session_complete' plan.id session.id %}" class="btn-complete-session">Mark as Complete</a>
+        </div>
+        {% empty %}
+        <p>No sessions found for this plan.</p>
+        {% endfor %}
+    </div>
+</body>
+
+</html>

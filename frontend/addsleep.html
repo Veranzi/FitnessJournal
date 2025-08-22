@@ -1,0 +1,84 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Sleep Record</title>
+    <link rel="stylesheet" href="{% static 'add_sleep.css' %}">
+</head>
+
+<body>
+    <!-- Navigation Header -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">FITNESS JOURNAL</a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="{% url 'sleep_records' %}">Sleep Records</a></li>
+                    <li class="nav-item"><a class="btn btn-outline-light" href="{% url 'index' %}">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container mt-5">
+        <h1 class="page-title">Add New Sleep Record</h1>
+        <p class="page-description">Record your sleep details to track progress.</p>
+
+        <form method="POST">
+            {% csrf_token %}
+            <div class="form-group mb-3">
+                <label for="date" class="form-label">Date</label>
+                {{ form.date }}  <!-- Render the date field -->
+            </div>
+
+            <div class="form-group mb-3">
+                <label for="hours_slept" class="form-label">Hours Slept</label>
+                {{ form.hours_slept }}  <!-- Render the hours slept field -->
+            </div>
+
+            <div class="form-group mb-3">
+                <label for="quality" class="form-label">Quality</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="quality" id="qualityExcellent" value="Excellent">
+                    <label class="form-check-label" for="qualityExcellent">Excellent</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="quality" id="qualityGood" value="Good">
+                    <label class="form-check-label" for="qualityGood">Good</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="quality" id="qualityFair" value="Fair">
+                    <label class="form-check-label" for="qualityFair">Fair</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="quality" id="qualityPoor" value="Poor">
+                    <label class="form-check-label" for="qualityPoor">Poor</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="quality" id="qualityVeryPoor" value="Very Poor">
+                    <label class="form-check-label" for="qualityVeryPoor">Very Poor</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="quality" id="qualityAwful" value="Awful">
+                    <label class="form-check-label" for="qualityAwful">Awful</label>
+                </div>
+            </div>
+
+            <div class="form-group mb-3">
+                <label for="notes" class="form-label">Notes</label>
+                {{ form.notes }}  <!-- Render the notes field -->
+            </div>
+
+            <div class="d-grid gap-2 mt-4">
+                <button type="submit" class="btn btn-primary">Save Sleep Record</button>
+            </div>
+        </form>
+    </div>
+
+</body>
+
+</html>
