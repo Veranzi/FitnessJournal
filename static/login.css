@@ -1,0 +1,176 @@
+/* General styling */
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 0;
+}
+
+/* Main Container */
+.main-container {
+    display: flex;
+    justify-content: flex-start;  /* Align to the left */
+    padding-top: 50px;
+    padding-left: 20%;  /* Adjust left padding to move it more to the left */
+}
+
+/* Card Styling */
+.login-card {
+    border-radius: 60px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    background-color: #d6d9dd; /* Non-white background */
+    border: none;  
+    width: 600px;
+    padding: 5px;
+}
+
+/* Card Body */
+.login-card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Heading Box */
+.login-title {
+    font-size: 28px;
+    color: #ffffff;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    background: linear-gradient(45deg, #ff5733, #284aa7); /* Two-color background */
+    border-radius: 50px;
+    width: 552px;
+    margin-bottom: 20px;
+    margin-top: 0;
+}
+
+/* Form Label Styling */
+.input-label {
+    font-size: 20px;
+    font-weight: 600;
+    color: #000000;
+    margin-bottom: 7px;
+    margin-top: 20px;
+    display: block;
+    text-align: center;
+}
+
+/* Input Fields */
+input.form-control {
+    border-radius: 90px;
+    border: 1px solid #ced4da;
+    padding: 12px;
+    font-size: 16px;
+    width: 100%;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+/* Button Styling */
+.submit-btn {
+    font-size: 16px;
+    padding: 12px 20px;
+    border-radius: 30px;
+    background: linear-gradient(45deg, #ff5733, #284aa7); /* Two-color background */
+    border: none;
+    width: 100%;
+    margin-top: 30px;
+    color: white;
+    font-weight: bold;
+}
+
+.submit-btn:hover {
+    background: linear-gradient(45deg, #0056b3, #218838); /* Darker hover effect */
+}
+
+/* Success Message */
+.success-message {
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+    color: #155724;
+    font-size: 16px;
+    padding: 15px;
+    margin-bottom: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Links */
+a {
+    color: #0044ff;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Account Link Styling */
+.account-link {
+    font-size: 16px;             
+    color: #4f555a;             
+    text-align: center;        
+    margin-top: 20px;            
+}
+
+.account-link a {
+    color: #007bff;              
+    text-decoration: none;      
+    font-weight: bold;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;               
+}
+
+.account-link a:hover {
+    text-decoration: underline;  
+    color: #0056b3;              
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .login-card {
+        padding: 20px;
+    }
+
+    .input-label {
+        font-size: 14px;
+    }
+
+    input.form-control {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .submit-btn {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .login-title {
+        font-size: 24px;
+    }
+
+    .account-link, a {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .login-card {
+        width: 100%;
+        border-radius: 8px;
+    }
+
+    .login-card-body {
+        padding: 15px;
+    }
+}
