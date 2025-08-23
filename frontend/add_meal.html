@@ -6,34 +6,79 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add New Meal</title>
-    <link rel="stylesheet" href="{% static 'add_meal.css' %}">
+    <link rel="stylesheet" href="{% static 'addmeal.css' %}">
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <!-- Navigation Header -->
+    <nav class="nav navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">FITNESS JOURNAL</a>
+            <a class="brand" href="#">FITNESS JOURNAL</a>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
+                <ul class="nav-links ms-auto">
                     <li class="nav-item"><a class="nav-link" href="{% url 'dashboard' %}">Dashboard</a></li>
                     <li class="nav-item"><a class="nav-link" href="{% url 'diet_log' %}">Diet Log</a></li>
-                    <li class="nav-item"><a class="btn btn-outline-light" href="{% url 'index' %}">Logout</a></li>
+                    <li class="nav-item"><a class="btn btn-outline" href="{% url 'index' %}">Logout</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <div class="container mt-5">
-        <h1>Add New Meal</h1>
+    <!-- Main Content -->
+    <div class="workoutcontainer mt-5">
+        <div class="card">
+            <div class="card-body">
+                <h1 class="page-title">Add New Meal</h1>
+                <p class="page-description">Track your meals here. Fill in the details and save your progress.</p>
 
-        <form method="post">
-            {% csrf_token %}
-            {{ form.as_p }}  <!-- Render the form fields -->
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="form-group mb-3">
+                        <label for="food_item" class="form-label">Food Item</label>
+                        {{ form.food_item }} <!-- Render the food_item field -->
+                    </div>
 
-            <div class="d-grid gap-2 mt-4">
-                <button type="submit" class="btn btn-primary">Save Meal</button>
+                    <div class="form-group mb-3">
+                        <label for="calories" class="form-label">Calories</label>
+                        {{ form.calories }} <!-- Render the calories field -->
+                    </div>
+
+                    <div class="form-group mb-3">
+                        <label for="carbs" class="form-label">Carbohydrates</label>
+                        {{ form.carbs }} <!-- Render the carbs field -->
+                    </div>
+
+                    <div class="form-group mb-3">
+                        <label for="protein" class="form-label">Protein</label>
+                        {{ form.protein }} <!-- Render the protein field -->
+                    </div>
+
+                    <div class="form-group mb-3">
+                        <label for="fat" class="form-label">Fat</label>
+                        {{ form.fat }} <!-- Render the fat field -->
+                    </div>
+
+                    <div class="form-group mb-3">
+                        <label for="meal_type" class="form-label">Meal Type</label>
+                        {{ form.meal_type }} <!-- Render the meal_type field -->
+                    </div>
+
+                    <div class="form-group mb-3">
+                        <label for="date" class="form-label">Date</label>
+                        {{ form.date }} <!-- Render the date field -->
+                    </div>
+
+                    <div class="form-group mb-3">
+                        <label for="notes" class="form-label">Notes</label>
+                        {{ form.notes }} <!-- Render the notes field -->
+                    </div>
+
+                    <div class="d-grid gap-2 mt-4">
+                        <button type="submit" class="btn btn-primary">Save Meal</button>
+                    </div>
+                </form>
             </div>
-        </form>
+        </div>
     </div>
 
 </body>

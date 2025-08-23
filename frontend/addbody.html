@@ -6,67 +6,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Body Data</title>
-    <link rel="stylesheet" href="{% static 'add_body.css' %}">
+    <link rel="stylesheet" href="{% static 'addbody.css' %}">
 </head>
 
 <body>
     <!-- Navigation Header -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="nav navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">FITNESS JOURNAL</a>
+            <a class="brand" href="#">FITNESS JOURNAL</a>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
+                <ul class="nav-links ms-auto">
                     <li class="nav-item"><a class="nav-link" href="{% url 'dashboard' %}">Dashboard</a></li>
                     <li class="nav-item"><a class="nav-link" href="{% url 'body_data' %}">Body Data</a></li>
-                    <li class="nav-item"><a class="btn btn-outline-light" href="{% url 'index' %}">Logout</a></li>
+                    <li class="nav-item"><a class="btn btn-outline" href="{% url 'index' %}">Logout</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
     <!-- Main Content -->
-    <div class="container mt-5">
-        <h1 class="page-title">Add New Body Data</h1>
-        <p class="page-description">Record your body measurements to track progress.</p>
+    <div class="workoutcontainer mt-5">
+        <div class="card">
+            <div class="card-body">
+                <h1 class="page-title">Add New Body Data</h1>
+                <p class="page-description">Record your body measurements to track progress and health.</p>
 
-        <form method="POST">
-            {% csrf_token %}
-            <div class="form-group mb-3">
-                <label for="date" class="form-label">Date</label>
-                {{ form.date }}
-            </div>
+                <form method="POST">
+                    {% csrf_token %}
+                    <div class="form-group mb-3">
+                        <label for="date" class="form-label">Date</label>
+                        {{ form.date }} <!-- Render the date field -->
+                    </div>
 
-            <div class="form-group mb-3">
-                <label for="weight" class="form-label">Weight (kg)</label>
-                {{ form.weight }}
-            </div>
+                    <div class="form-group mb-3">
+                        <label for="weight" class="form-label">Weight (kg)</label>
+                        {{ form.weight }} <!-- Render the weight field -->
+                    </div>
 
-            <div class="form-group mb-3">
-                <label for="chest" class="form-label">Chest (cm)</label>
-                {{ form.chest }}
-            </div>
+                    <div class="form-group mb-3">
+                        <label for="chest" class="form-label">Chest (cm)</label>
+                        {{ form.chest }} <!-- Render the chest field -->
+                    </div>
 
-            <div class="form-group mb-3">
-                <label for="waist" class="form-label">Waist (cm)</label>
-                {{ form.waist }}
-            </div>
+                    <div class="form-group mb-3">
+                        <label for="waist" class="form-label">Waist (cm)</label>
+                        {{ form.waist }} <!-- Render the waist field -->
+                    </div>
 
-            <div class="form-group mb-3">
-                <label for="hips" class="form-label">Hips (cm)</label>
-                {{ form.hips }}
-            </div>
+                    <div class="form-group mb-3">
+                        <label for="hips" class="form-label">Hips (cm)</label>
+                        {{ form.hips }} <!-- Render the hips field -->
+                    </div>
 
-            <div class="form-group mb-3">
-                <label for="notes" class="form-label">Notes</label>
-                {{ form.notes }}
-            </div>
+                    <div class="form-group mb-3">
+                        <label for="notes" class="form-label">Notes</label>
+                        {{ form.notes }} <!-- Render the notes field -->
+                    </div>
 
-            <div class="d-grid gap-2 mt-4">
-                <button type="submit" class="btn btn-primary">Save Body Data</button>
+                    <div class="d-grid gap-2 mt-4">
+                        <button type="submit" class="btn btn-primary">Save Body Data</button>
+                    </div>
+                </form>
             </div>
-        </form>
+        </div>
     </div>
-
 </body>
 
 </html>
