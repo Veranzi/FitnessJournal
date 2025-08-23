@@ -1,7 +1,7 @@
 /* General body styling */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f4f6f9;
+    background-color: #f8f9fa;
     margin: 0;
     padding: 0;
     color: #333;
@@ -9,8 +9,8 @@ body {
 
 /* Navbar Styling */
 header nav {
-    background: linear-gradient(45deg, #2c3e50, #2980b9);
-    padding: 14px 0;
+    background: linear-gradient(45deg, #2c3e50, #2980b9); /* Vibrant gradient */
+    padding: 16px 0;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
@@ -23,108 +23,109 @@ nav ul {
 }
 
 nav ul li {
-    margin: 0 15px;
+    margin: 0 20px;
 }
 
 nav ul li a {
     color: white;
     font-weight: 600;
     text-decoration: none;
-    font-size: 13px;
+    font-size: 14px;
     padding: 12px 15px;
     border-radius: 30px;
     transition: background 0.3s ease, transform 0.3s ease;
 }
 
 nav ul li a:hover {
-    background: #ff5733;
+    background: #ff5733; /* Accent color on hover */
     color: #fff;
     transform: scale(1.05);
 }
 
 /* Main Content Styling */
 .container {
-    margin-top: 30px;
+    margin-top: 40px;
     padding: 30px;
-    max-width: 700px;
+    max-width: 900px;
     margin: auto;
-    background-color: #d67a65;
-    border-radius: 12px;
-    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.1);
     font-family: 'Arial', sans-serif;
-    transition: box-shadow 0.3s ease;
 }
 
-.container:hover {
-    box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.2);
-}
-
-h1 {
+.container h1 {
     font-size: 32px;
-    font-weight: 1100;
-    color: #0544f1;
+    font-weight: 800;
+    color: #224ec7;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     text-transform: uppercase;
     letter-spacing: 2px;
-    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.15);
 }
 
-p {
-    font-size: 0.95rem;
-    color: #6c757d;
-    line-height: 1.6;
+.plan-info p,
+.notification p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 12px;
+}
+
+.plan-info p strong,
+.notification p strong {
+    color: #007bff;
 }
 
 /* Plan Card Styling */
-.plan-card {
-    background-color: #ffffff;
-    padding: 18px;
+.session-card {
+    background-color: #e6e2e2;
+    padding: 10px;
     margin-bottom: 20px;
-    border-radius: 40px;
+    border-radius: 60px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     font-family: 'Arial', sans-serif;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.plan-card:hover {
-    transform: scale(1.05);
+.session-card:hover {
+    transform: scale(1.02);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-.plan-card h2 {
-    font-size: 18px;
-    color: #082cfa;
+.session-card h3 {
+    color: #042a94;
+    font-size: 20px;
+    font-weight: 900;
     margin-bottom: 10px;
-    font-weight: 700;
 }
 
-.plan-card p {
-    color: #020202;
+.session-card p {
+    color: #0c0c0c;
     font-size: 14px;
 }
 
-.plan-card .btn-view-sessions {
-    background: linear-gradient(45deg, #ff5733, #2980b9);
+.session-card a.btn-complete-session {
+    background: linear-gradient(135deg, #ff5733, #284aa7);
     color: white;
     padding: 12px 20px;
     text-decoration: none;
     border-radius: 30px;
-    margin-top: 12px;
+    font-weight: bold;
     font-size: 14px;
-    font-weight: 600;
     display: inline-block;
+    margin-top: 15px;
     transition: background 0.3s ease, transform 0.3s ease;
 }
 
-.plan-card .btn-view-sessions:hover {
-    background: linear-gradient(45deg, #2980b9, #ff5733);
+.session-card a.btn-complete-session:hover {
+    background: linear-gradient(135deg, #284aa7, #ff5733);
     transform: scale(1.05);
 }
 
 /* Empty state styling */
-.plan-card p.empty {
-    font-size: 1rem;
+.session-card p.empty {
+    font-size: 1.1rem;
     text-align: center;
     color: #999;
 }
@@ -136,16 +137,16 @@ p {
     }
 
     h1 {
-        font-size: 24px;
+        font-size: 28px;
     }
 
-    .plan-card {
-        padding: 16px;
+    .session-card {
+        padding: 15px;
     }
 
-    .plan-card .btn-view-sessions {
+    .session-card a.btn-complete-session {
         padding: 10px 18px;
-        font-size: 13px;
+        font-size: 12px;
     }
 }
 
@@ -156,19 +157,19 @@ p {
     }
 
     nav ul li {
-        margin-bottom: 8px;
+        margin-bottom: 10px;
     }
 
     h1 {
-        font-size: 20px;
+        font-size: 24px;
     }
 
-    .plan-card {
-        padding: 14px;
+    .session-card {
+        padding: 12px;
     }
 
-    .plan-card .btn-view-sessions {
-        padding: 10px 18px;
-        font-size: 13px;
+    .session-card a.btn-complete-session {
+        padding: 8px 15px;
+        font-size: 12px;
     }
 }
