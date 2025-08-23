@@ -6,17 +6,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Diet Log</title>
-    <link rel="stylesheet" href="{% static 'log_diet.css' %}">
+    <link rel="stylesheet" href="{% static 'logdiet.css' %}">
 </head>
 
 <body>
+    <!-- Navigation Header -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">FITNESS JOURNAL</a>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="{% url 'dashboard' %}">Dashboard</a></li>
-                    <li class="nav-item"><a class="btn btn-outline-light" href="{% url 'index' %}">Logout</a></li>
+                    <li class="nav-item"><a class="btn btn-outline" href="{% url 'index' %}">Logout</a></li>
                 </ul>
             </div>
         </div>
@@ -36,32 +37,33 @@
             <table class="table table-striped">
                 <thead>
                     <tr>
+                        <th>Date</th>
                         <th>Food Item</th>
                         <th>Calories</th>
                         <th>Carbohydrates</th>
                         <th>Protein</th>
                         <th>Fat</th>
                         <th>Meal Type</th>
-                        <th>Date</th>
+                        
                     </tr>
                 </thead>
                 <tbody>
                     {% for meal in meals %}
                     <tr>
+                        <td>{{ meal.date }}</td>
                         <td>{{ meal.food_item }}</td>
                         <td>{{ meal.calories }} kcal</td>
                         <td>{{ meal.carbs }} g</td>
                         <td>{{ meal.protein }} g</td>
                         <td>{{ meal.fat }} g</td>
                         <td>{{ meal.meal_type }}</td>
-                        <td>{{ meal.date }}</td>
+                        
                     </tr>
                     {% endfor %}
                 </tbody>
             </table>
         </div>
     </div>
-
 </body>
 
 </html>
