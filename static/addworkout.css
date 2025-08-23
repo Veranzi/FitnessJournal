@@ -1,0 +1,211 @@
+/* General styling */
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #e8f0f7; /* Light background for a clean look */
+    margin: 0;
+    padding: 0;
+    color: #333; /* Dark text for readability */
+}
+
+/* Navbar Styling */
+.nav {
+    background-color: #343a40; /* Dark background for the navbar */
+    font-family: 'Arial', sans-serif;
+    border-bottom: 2px solid #ff5733; /* Orange border at the bottom */
+    padding: 10px 0; /* Increased padding for better height */
+}
+
+.brand {
+    font-size: 22px;
+    font-weight: bold;
+    color: #ff5733; /* Orange color for the brand */
+    margin-right: auto;
+}
+
+.nav-links {
+    margin-left: auto;
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+}
+
+.nav-link {
+    font-size: 14px;
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #ff7a00;
+}
+
+/* Logout Button */
+.btn-outline {
+    background: linear-gradient(135deg, #ff5733, #284aa7); /* Warm gradient for a modern feel */
+    border: 2px solid #333;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+}
+
+.btn-outline:hover {
+    background: linear-gradient(135deg, #284aa7, #ff5733);
+    color: #333;
+    transform: scale(1.05);
+}
+
+.btn-outline:focus {
+    outline: none;
+}
+
+/* Card Styling */
+.workoutcontainer {
+    display: flex;
+    justify-content: center; /* Centering the container */
+    align-items: center;
+    height: 100vh; /* Full height for vertical centering */
+    padding: 10px;
+}
+
+.card {
+    width: 600px; /* Fixed width for the card */
+    background-color: #c2bcbc;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 5px;
+}
+
+/* Card Body */
+.card-body {
+    font-family: 'Times New Roman', Times, serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+}
+
+/* Heading */
+.page-title {
+    font-size: 28px;
+    font-weight: 1000;
+    color: #224ec7;
+    text-align: center;
+    margin-bottom: 2px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Description Text */
+.page-description {
+    font-size: 18px;
+    color: #c20b0b;
+    text-align: center;
+    margin-bottom: 30px;
+    line-height: 1.6;
+    font-style: italic;
+}
+
+/* Form Styling */
+.form-group {
+    display: flex;                    
+    align-items: center;               
+    justify-content: flex-start;       
+    width: 100%;
+    margin-bottom: 20px;  
+    font-family: 'Times New Roman', Times, serif; 
+}
+
+.form-label {
+    font-size: 16px;
+    font-weight: 600;
+    color: #000000;
+    display: block;
+    width: 40%;                       
+    margin-right: 10px;               
+}
+
+input.form-control {
+    border-radius: 30px;   
+    padding: 20px;
+    font-size: 12px;
+    width: 55%;             /* Controls input width */
+    text-align: center;
+    box-sizing: border-box; 
+}
+
+
+
+/* Button Container */
+.d-grid {
+    display: flex;                    /* Apply flexbox to center the button */
+    justify-content: center;          /* Center the button horizontally */
+    width: 100%;                      /* Ensure it takes up the full width of the container */
+    margin-top: 20px;                  /* Add a small margin on top for spacing */
+}
+
+/* Button Styling */
+.btn-primary {
+    font-size: 16px;
+    padding: 12px 20px;
+    border-radius: 30px;
+    background: linear-gradient(135deg, #ff5733, #284aa7);
+    color: #fff;
+    border: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+}
+
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #284aa7, #ff5733);
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .card {
+        padding: 20px;
+        width: 100%; /* Make the card full width on smaller screens */
+    }
+
+    .page-title {
+        font-size: 24px;
+    }
+
+    .page-description {
+        font-size: 16px;
+    }
+
+    .btn-primary {
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .workoutcontainer {
+        padding: 10px;
+    }
+
+    .page-title {
+        font-size: 22px;
+    }
+
+    .page-description {
+        font-size: 14px;
+    }
+
+    .btn-primary {
+        width: 100%;
+        padding: 12px 0;
+    }
+}

@@ -6,67 +6,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add New Workout</title>
-    <link rel="stylesheet" href="{% static 'add_workout.css' %}">
+    <link rel="stylesheet" href="{% static 'addworkout.css' %}">
 </head>
 
 <body>
     <!-- Navigation Header -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="nav navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">FITNESS JOURNAL</a>
+            <a class="brand" href="#">FITNESS JOURNAL</a>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
+                <ul class="nav-links ms-auto">
                     <li class="nav-item"><a class="nav-link" href="{% url 'dashboard' %}">Dashboard</a></li>
                     <li class="nav-item"><a class="nav-link" href="{% url 'training_records' %}">Training Records</a></li>
-                    <li class="nav-item"><a class="btn btn-outline-light" href="{% url 'index' %}">Logout</a></li>
+                    <li class="nav-item"><a class="btn btn-outline" href="{% url 'index' %}">Logout</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
     <!-- Main Content -->
-    <div class="container mt-5">
-        <h1 class="page-title">Add New Workout</h1>
-        <p class="page-description">Track your workouts here. Fill in the details and save your progress.</p>
+    <div class="workoutcontainer mt-5">
+        <div class="card">
+            <div class="card-body">
+                <h1 class="page-title">Add New Workout</h1>
+                <p class="page-description">Track your workouts here. Fill in the details and save your progress.</p>
 
-        <form method="post">
-            {% csrf_token %}
-            <div class="form-group mb-3">
-                <label for="exercise" class="form-label">Exercise</label>
-                {{ form.exercise }}  <!-- Render the exercise field -->
-            </div>
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="form-group mb-3">
+                        <label for="exercise" class="form-label">Exercise</label>
+                        {{ form.exercise }} <!-- Render the exercise field -->
+                    </div>
 
-            <div class="form-group mb-3">
-                <label for="sets" class="form-label">Sets</label>
-                {{ form.sets }}  <!-- Render the sets field -->
-            </div>
+                    <div class="form-group mb-3">
+                        <label for="sets" class="form-label">Sets</label>
+                        {{ form.sets }} <!-- Render the sets field -->
+                    </div>
 
-            <div class="form-group mb-3">
-                <label for="reps" class="form-label">Reps</label>
-                {{ form.reps }}  <!-- Render the reps field -->
-            </div>
+                    <div class="form-group mb-3">
+                        <label for="reps" class="form-label">Reps</label>
+                        {{ form.reps }} <!-- Render the reps field -->
+                    </div>
 
-            <div class="form-group mb-3">
-                <label for="weight" class="form-label">Weight</label>
-                {{ form.weight }}  <!-- Render the weight field -->
-            </div>
+                    <div class="form-group mb-3">
+                        <label for="weight" class="form-label">Weight</label>
+                        {{ form.weight }} <!-- Render the weight field -->
+                    </div>
 
-            <div class="form-group mb-3">
-                <label for="date" class="form-label">Date</label>
-                {{ form.date }}  <!-- Render the date field -->
-            </div>
+                    <div class="form-group mb-3">
+                        <label for="date" class="form-label">Date</label>
+                        {{ form.date }} <!-- Render the date field -->
+                    </div>
 
-            <div class="form-group mb-3">
-                <label for="notes" class="form-label">Notes</label>
-                {{ form.notes }}  <!-- Render the notes field -->
-            </div>
+                    <div class="form-group mb-3">
+                        <label for="notes" class="form-label">Notes</label>
+                        {{ form.notes }} <!-- Render the notes field -->
+                    </div>
 
-            <div class="d-grid gap-2 mt-4">
-                <button type="submit" class="btn btn-primary">Save Workout</button>
+                    <div class="d-grid gap-2 mt-4">
+                        <button type="submit" class="btn btn-primary">Save Workout</button>
+                    </div>
+                </form>
             </div>
-        </form>
+        </div>
     </div>
-
 </body>
 
 </html>

@@ -82,7 +82,7 @@ input.form-control {
 }
 
 .submit-btn:hover {
-    background: linear-gradient(45deg, #0056b3, #218838); /* Darker hover effect */
+    background: linear-gradient(135deg, #284aa7, #ff5733);
 }
 
 /* Success Message */
