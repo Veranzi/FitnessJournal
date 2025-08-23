@@ -15,7 +15,7 @@ def dashboard(request):
     # Fetch recent data for charts (e.g., last 30 days)
     chart_data = {
         'body_data': list(body_data.values('date', 'weight', 'chest', 'waist', 'hips')),
-        'meals': list(meals.values('date', 'calories', 'carbs', 'protein', 'fat')),
+        'meals': list(meals.values('date', 'calories', 'carbohydrates', 'protein', 'fat')),
         'sleep': list(sleep_records.values('date', 'hours_slept', 'quality')),
         'workouts': list(workouts.values('date', 'weight')),
     }
@@ -31,7 +31,7 @@ def get_chart_data(request):
 
     chart_data = {
         'body_data': list(body_data.values('date', 'weight', 'chest', 'waist', 'hips')),
-        'meals': list(meals.values('date', 'calories', 'carbs', 'protein', 'fat')),
+        'meals': list(meals.values('date', 'calories', 'carbohydrates', 'protein', 'fat')),
         'sleep': list(sleep_records.values('date', 'hours_slept', 'quality')),
         'workouts': list(workouts.values('date', 'weight')),
     }

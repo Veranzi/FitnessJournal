@@ -1,210 +1,237 @@
-/* General body styling */
+/* General styling */
 body {
-    font-family: 'Times New Roman', Times, serif;    
-    background-color: #f4f6f9;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #e8f0f7; /* Light background for a clean look */
     margin: 0;
     padding: 0;
+    color: #333; /* Dark text for readability */
 }
 
 /* Navbar Styling */
-.navbar {
+.fitness-navbar {
     background-color: #343a40; /* Dark background for the navbar */
-    font-family: 'Times New Roman', Times, serif; 
+    font-family: 'Times New Roman', Times, serif;
     border-bottom: 2px solid #ff5733; /* Orange border at the bottom */
-    padding: 15px 0; /* Increased padding for better height */
+    padding: 8px 0; /* Increased padding for better height */
 }
 
-.navbar-brand {
-    font-size: 1rem; /* Larger font size for the brand */
+.fitness-navbar-brand {
+    font-size: 22px; /* Larger font size for the brand */
     font-weight: bold;
     color: #ff5733; /* Orange color for the brand */
     margin-right: auto; /* Ensures the brand stays on the left */
 }
 
-.navbar-nav {
-    margin-left: auto;  /* Ensure that links and button are pushed to the right */
+.fitness-navbar-nav {
+    margin-left: auto; /* Ensure that links and button are pushed to the right */
     font-family: 'Times New Roman', Times, serif;
-    list-style-type: none;  /* Removes bullets from the list */
-    display: flex;  /* Display items horizontally */
-    gap: 15px;  /* Adds spacing between links */
+    list-style-type: none; /* Removes bullets from the list */
+    display: flex; /* Display items horizontally */
+    gap: 15px; /* Adds spacing between links */
 }
 
-.navbar-nav .nav-item .nav-link {
-    color: white; /* White color for navigation links */
-    font-weight: 500;
-    padding: 12px 20px; /* Increased padding for better readability */
-    font-size: 16px;
-}
-
-.navbar-nav .nav-item .nav-link:hover {
-    color: #ff5733; /* Orange color on hover */
-}
-
-.navbar-nav .nav-item .btn {
-    background-color: #ff5733; /* Orange background for the Sign Up button */
-    color: white; /* White text for the button */
-    font-weight: 600;
-    padding: 12px 25px; /* Increased padding to make the button larger */
-    font-size: 16px;
-    border-radius: 5px;
-    text-decoration: none; /* Remove underline */
-}
-
-.navbar-nav .nav-item .btn:hover {
-    background-color: #c74d2a; /* Darker orange on hover */
-}
-
-/* Main Content Styling */
-.container {
-    margin-top: 30px;
-    font-family: 'Times New Roman', Times, serif;
-}
-
-h1 {
-    font-size: 2rem;
-    font-family: 'Times New Roman', Times, serif;
-    font-weight: bold;
-    color: #333;
-}
-
-p {
-    font-size: 1rem;
-    color: #6c757d;
-    font-family: 'Times New Roman', Times, serif;
-}
-
-/* Button for Add New Workout */
-.btn-primary {
-    background-color: #007bff;
-    border: none;
-    padding: 10px 20px;
+.fitness-nav-link {
     font-size: 14px;
-    font-weight: 600;
-    border-radius: 5px;
-    font-family: 'Times New Roman', Times, serif;
+    color: #ffffff;
+    margin-right: 20px;
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
 
-.btn-primary:hover {
-    background-color: #0056b3;
+.fitness-nav-link:hover {
+    color: #ff7a00; /* Hover effect for the links */
+}
+
+/* Logout Button */
+.btn-outline {
+    background: linear-gradient(135deg, #ff5733, #284aa7); /* Warm gradient for a modern feel */
+    border: 2px solid #333;        /* Black border */
+    color: #f8f4f4;                   /* Black text color */
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 30px;           /* Rounded corners */
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+}
+
+.btn-outline:hover {
+    background-color: #112fd8;     /* Light gray background on hover */
+    color: #000000;                   /* Maintain black text on hover */
+    transform: scale(1.05);         /* Slightly enlarge the button on hover */
+}
+
+.btn-outline:focus {
+    outline: none;                 /* Remove focus outline */
+}
+
+
+/* Main Container */
+.fitness-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 50px;
+}
+
+/* Heading */
+.fitness-heading {
+    font-size: 25px;
+    font-weight: 900;
+    color: #0646f7; /* Beautiful bold blue */
+    text-align: center;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Description Text */
+.fitness-description {
+    font-size: 18px;
+    color: #555;
+    text-align: center;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+/* Button Container */
+.fitness-btn-container {
+    margin-bottom: 40px;
+}
+
+/* Add New Workout Button */
+.fitness-btn {
+    font-size: 18px;
+    padding: 15px 30px;
+    border-radius: 30px;
+    background: linear-gradient(135deg, #ff5733, #284aa7); /* Warm gradient for a modern feel */
+    color: #fff;
+    border: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.fitness-btn:hover {
+    background: linear-gradient(135deg, #ff3e00, #ff7a00);
+    transform: scale(1.05); /* Slightly increase button size on hover */
+}
+
+/* Table Responsive Container */
+.fitness-table-responsive {
+    width: 100%;
+    overflow-x: auto;
+    padding: 20px;
 }
 
 /* Table Styling */
-.table {
+.fitness-table {
     width: 100%;
     border-collapse: collapse;
-    font-family: 'Times New Roman', Times, serif;
-    margin-top: 30px;
+    background: #fff; /* White background for clean table */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
 }
 
-.table th,
-.table td {
+.fitness-table-striped tr:nth-child(odd) {
+    background-color: #f9f9f9; /* Light gray for alternate rows */
+}
+
+/* Table Headers */
+.fitness-table th {
+    padding: 15px;
+    font-size: 18px;
+    text-align: center;
+    background: linear-gradient(135deg, #007bff, #284aa7); /* Gradient blue header */
+    color: #fff;
+    border-bottom: 2px solid #ccc;
+}
+
+/* Table Data */
+.fitness-table td {
     padding: 12px;
-    text-align: left;
+    font-size: 16px;
+    text-align: center;
+    color: #555;
     border-bottom: 1px solid #ddd;
 }
 
-.table th {
-    background-color: #f8f9fa;
-    font-weight: 600;
-    color: #343a40;
+/* Hover Effect on Rows */
+.fitness-table tr:hover {
+    background-color: #f2f2f2;
+    cursor: pointer;
 }
 
-.table tr:hover {
-    background-color: #f1f1f1;
+/* Account Link Styling */
+.account-link {
+    font-size: 16px;
+    color: #555;
+    text-align: center;
+    margin-top: 30px;
 }
 
-.table .btn-info {
-    background-color: #17a2b8; /* Info button color */
-    color: white;
-    font-weight: 600;
-    border-radius: 5px;
+.account-link a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s ease;
 }
 
-.table .btn-info:hover {
-    background-color: #138496;
+.account-link a:hover {
+    color: #ff7a00; /* Orange on hover */
+    text-decoration: underline;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    /* Navbar */
-    .navbar-nav {
-        flex-direction: column; /* Stack items vertically on smaller screens */
-        margin-top: 10px; /* Space between items */
+    .fitness-container {
+        padding-left: 10px;
+        padding-right: 10px;
     }
 
-    .navbar-nav .nav-link {
-        font-size: 14px; /* Adjust font size for mobile */
-        padding: 10px 15px; /* Adjust padding */
+    .fitness-heading {
+        font-size: 28px;
     }
 
-    .navbar-nav .btn {
-        padding: 10px 20px; /* Adjust button padding */
-        font-size: 14px; /* Adjust button font size */
+    .fitness-btn {
+        font-size: 16px;
+        padding: 12px 25px;
     }
 
-    /* Main content */
-    .container {
-        padding: 0 15px; /* Add padding for better mobile alignment */
+    .fitness-table th, .fitness-table td {
+        font-size: 14px;
+        padding: 10px;
     }
 
-    h1 {
-        font-size: 1.5rem; /* Smaller heading for mobile */
-    }
-
-    p {
-        font-size: 0.9rem; /* Slightly smaller text for better readability */
-    }
-
-    /* Table adjustments */
-    .table th,
-    .table td {
-        padding: 8px; /* Reduced padding for mobile */
-    }
-
-    .table .btn-info {
-        padding: 8px 15px; /* Adjust button size for mobile */
-        font-size: 14px; /* Smaller font size */
-    }
-
-    .btn-primary {
-        padding: 8px 15px; /* Adjust button padding */
-        font-size: 14px; /* Smaller font size */
+    .fitness-btn-outline-light {
+        font-size: 14px;
+        padding: 6px 12px;
     }
 }
 
 @media (max-width: 480px) {
-    /* Navbar items stacked and centered for very small screens */
-    .navbar-nav {
-        flex-direction: column;
-        align-items: center;
-        margin-top: 10px;
+    .fitness-container {
+        padding: 10px;
     }
 
-    .navbar-nav .nav-item {
-        margin-bottom: 10px; /* Space between navbar items */
+    .fitness-heading {
+        font-size: 24px;
     }
 
-    .navbar-brand {
-        font-size: 1.5rem; /* Smaller font for the brand */
+    .fitness-btn {
+        width: 100%;
+        font-size: 14px;
+        padding: 12px 0;
     }
 
-    /* Table adjustments */
-    .table th,
-    .table td {
-        padding: 6px; /* Further reduced padding for small screens */
-    }
-
-    /* Button adjustments */
-    .btn-primary {
-        width: 100%; /* Make buttons full width */
-        padding: 12px; /* Adjust padding for better fit */
-    }
-
-    h1 {
-        font-size: 1.25rem; /* Smaller heading */
-    }
-
-    p {
-        font-size: 0.85rem; /* Further reduce paragraph font size */
+    .fitness-table {
+        font-size: 14px;
     }
 }

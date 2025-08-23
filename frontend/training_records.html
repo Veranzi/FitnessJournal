@@ -11,31 +11,33 @@
 
 <body> 
     <!-- Navigation Header -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="fitness-navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">FITNESS JOURNAL</a>
+            <a class="fitness-navbar-brand" href="#">FITNESS JOURNAL</a>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="{% url 'dashboard' %}">Dashboard</a></li>
-                    <li class="nav-item"><a class="btn btn-outline-light" href="{% url 'index' %} ">Logout</a></li>
+                <ul class="fitness-navbar-nav ms-auto">
+                    <li class="nav-item"><a class="fitness-nav-link" href="{% url 'dashboard' %}">Dashboard</a></li>
+                    <li class="nav-item"><a class="btn btn-outline" href="{% url 'index' %}">Logout</a></li>
+
+
                 </ul>
             </div>
         </div>
     </nav>
 
     <!-- Main Content -->
-    <div class="container mt-5">
-        <h1>My Training Records</h1>
-        <p>Here you can track and manage your workout history.</p>
+    <div class="fitness-container mt-5">
+        <h1 class="fitness-heading">My Training Records</h1>
+        <p class="fitness-description">Here you can track and manage your workout history.</p>
 
         <!-- Add New Workout Button -->
-        <div class="mb-4">
-            <a href="{% url 'add_workout' %}" class="btn btn-primary">Add New Workout</a>
+        <div class="fitness-btn-container mb-4">
+            <a href="{% url 'add_workout' %}" class="fitness-btn fitness-btn-primary">Add New Workout</a>
         </div>
 
         <!-- Training Records Table -->
-        <div class="table-responsive">
-            <table class="table table-striped">
+        <div class="fitness-table-responsive">
+            <table class="fitness-table table-striped">
                 <thead>
                     <tr>
                         <th>Exercise</th>
@@ -43,7 +45,6 @@
                         <th>Reps</th>
                         <th>Weight</th>
                         <th>Date</th>
-                        
                     </tr>
                 </thead>
                 <tbody>
@@ -54,7 +55,6 @@
                         <td>{{ record.reps }}</td>
                         <td>{{ record.weight }} kg</td>
                         <td>{{ record.date }}</td>
-                        
                     </tr>
                     {% endfor %}
                 </tbody>
